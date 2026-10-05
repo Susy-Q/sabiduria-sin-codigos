@@ -172,7 +172,7 @@
   <link rel="stylesheet" href="responsive.css">
   <link rel="stylesheet" href="pie-sitio.css">
   <link rel="stylesheet" href="encabezado-mejorado.css?v=20261005-7">
-  <link rel="stylesheet" href="tipografia-equilibrada.css?v=20261005-2">
+  <link rel="stylesheet" href="tipografia-equilibrada.css?v=20261005-4">
 </head>
 <body>
   <input id="logoInput" type="file" accept="image/png,image/jpeg,image/webp">
@@ -865,7 +865,7 @@
       const percent=Math.round(done/total*100);document.getElementById("progressPercent").textContent=percent+"%";document.getElementById("headerProgressPercent").textContent=percent+"%";
       const progressColor=percent===100?"#58e39a":percent>=80?"#b990ff":percent>=60?"#ff9f68":percent>=40?"#ffd166":percent>=20?"#5fd7cf":percent>0?"#6fb8ff":"#78909c";
       document.querySelectorAll(".progress-ring").forEach(ring=>{ring.style.setProperty("--course-progress",percent);ring.style.setProperty("--course-progress-color",progressColor)});
-      progressPanel.innerHTML=`<h3>${t("progressTitle")}</h3><div class="progress-overall"><span>${t("overallProgress")}</span><strong>${percent}%</strong></div><div class="progress-list">${modules.map((module,index)=>({module,index})).filter(({index})=>isModuleUnlocked(index)).map(({module,index})=>{const value=moduleProgress(index);return `<div class="progress-row"><span>${t("module")} ${index+1} · ${module[lang].title}</span><strong>${value}%</strong><div class="progress-track"><div class="progress-fill" style="width:${value}%"></div></div></div>`}).join("")}</div>`;
+      progressPanel.innerHTML=`<div class="progress-overall"><span>${t("overallProgress")}</span><strong>${percent}%</strong></div><div class="progress-track"><div class="progress-fill" style="width:${percent}%"></div></div>`;
       const current=document.getElementById("currentModuleProgress");if(current&&currentModule!==null){const value=moduleProgress(currentModule);current.textContent=value+"%";const fill=current.parentElement.querySelector(".progress-fill");if(fill)fill.style.width=value+"%"}
     }
 
