@@ -294,7 +294,7 @@ const server = http.createServer(async (req, res) => {
     if (req.method === "GET" && pathname === "/acceso.css") {
       return send(res, 200, await readFile(join(appRoot, "acceso.css"), "utf8"), "text/css; charset=utf-8");
     }
-    const publicStyles = new Set(["accesibilidad.css", "curso-gratuito.css", "acceso-mejorado.css", "registro-mejorado.css", "responsive.css", "pie-sitio.css", "encabezado-mejorado.css"]);
+    const publicStyles = new Set(["accesibilidad.css", "curso-gratuito.css", "acceso-mejorado.css", "registro-mejorado.css", "responsive.css", "pie-sitio.css", "encabezado-mejorado.css", "tipografia-equilibrada.css"]);
     if (req.method === "GET" && publicStyles.has(pathname.slice(1))) {
       return send(res, 200, await readFile(join(appRoot, pathname.slice(1)), "utf8"), "text/css; charset=utf-8", { "Cache-Control": "no-store" });
     }

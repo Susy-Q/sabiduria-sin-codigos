@@ -1,0 +1,28 @@
+/* Readable supporting text without reducing the course's large headings. */
+.site-header .brand-name span{font-size:.9rem!important;line-height:1.25}
+.map-card small,.preview-label,.map-card .lock-status{font-size:.9rem!important;line-height:1.4}
+.map-card p{font-size:1rem!important;line-height:1.65}
+.label,.module-tag{font-size:.95rem!important;line-height:1.4}
+.outline-tooltip{font-size:.9rem!important}
+.outline-intro{font-size:1rem!important;line-height:1.55}
+.outline-number{font-size:.9rem!important}
+.outline-item p{font-size:.9rem!important;line-height:1.5}
+.outline-topics-title{font-size:.8rem!important;line-height:1.4}
+.outline-topics{font-size:.95rem!important;line-height:1.55}
+.module-progress-card span,.side-nav strong{font-size:.9rem!important}
+.side-nav a{font-size:1rem!important}
+.learning-grid p,.step p,.tip p{font-size:1rem!important;line-height:1.6}
+.learning-grid strong,.activity strong,.resource strong{font-size:1.05rem!important}
+.activity span,.resource p{font-size:1rem!important;line-height:1.6}
+.doc-divider{font-size:.9rem!important}
+.footer-inner p{font-size:1rem!important;line-height:1.6}
+
+@media(max-width:580px){
+  .outline-head h2{font-size:1.65rem!important}
+  .outline-intro{font-size:1rem!important}
+  .outline-item{padding:12px!important}
+  .outline-number{width:36px!important;height:36px!important}
+  .outline-item strong{font-size:1rem!important;line-height:1.4}
+  .outline-topics-title{font-size:.8rem!important}
+  .outline-topics{padding-left:18px!important;font-size:.95rem!important}
+}
