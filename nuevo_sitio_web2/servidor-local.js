@@ -301,6 +301,9 @@ const server = http.createServer(async (req, res) => {
     if (req.method === "GET" && pathname === "/pie-sitio.js") {
       return send(res, 200, await readFile(join(appRoot, "pie-sitio.js"), "utf8"), "text/javascript; charset=utf-8", { "Cache-Control": "no-store" });
     }
+    if (req.method === "GET" && pathname === "/logo-codigo-tecnologia.png") {
+      return send(res, 200, await readFile(join(appRoot, "logo-codigo-tecnologia.png")), "image/png", { "Cache-Control": "public, max-age=3600" });
+    }
     if (req.method === "POST" && pathname === "/api/register") {
       if (!validOrigin(req)) return json(res, 403, { error: "Solicitud no válida." });
       const body = await readJson(req);
