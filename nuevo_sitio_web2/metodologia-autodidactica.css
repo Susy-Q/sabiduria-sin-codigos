@@ -1,0 +1,14 @@
+.self-paced-pacing{margin:18px 0 0;padding:12px 14px;border-left:4px solid var(--aqua,#61c8c5);border-radius:8px;background:rgba(255,255,255,.12);font-weight:700;line-height:1.55}
+.independent-practice-note{margin:14px 0 20px;padding:16px 18px;border:1px solid #bcdedb;border-radius:14px;background:#eef9f6;color:#183044}
+.independent-practice-note p{margin:6px 0 0;line-height:1.6}
+.final-project-fields{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:22px 0}
+.final-project-fields label{display:grid;gap:7px}.final-project-fields label:last-child{grid-column:1/-1}
+.final-project-fields textarea{width:100%;min-height:98px;padding:13px;border:1px solid #bfd1d4;border-radius:12px;background:#fff;color:#183044;font:inherit;line-height:1.5;resize:vertical}
+.final-project-fields textarea:focus{outline:3px solid rgba(41,123,145,.22);border-color:#297b91}
+.final-project-card fieldset{display:grid;gap:12px;margin:0;padding:18px;border:1px solid #bfd1d4;border-radius:14px}
+.final-project-card legend{padding:0 7px;font-weight:850}.final-project-card fieldset label{display:flex;gap:10px;align-items:flex-start;line-height:1.5}
+.final-project-card input[type=checkbox]{width:24px;height:24px;flex:0 0 auto}
+.project-status{margin:16px 0 0;padding:12px;border-radius:10px;background:#fff3d6;font-weight:750}.project-status.complete{background:#dff3ee;color:#175e55}
+.self-paced-help{padding:54px 0;background:#eef7f5;color:#183044}.self-paced-help h2{max-width:760px;margin:10px 0 22px;font-size:clamp(1.8rem,4vw,3rem)}
+.self-paced-help details{max-width:900px;margin:10px 0;padding:14px 18px;border:1px solid #c9dedd;border-radius:12px;background:#fff}.self-paced-help summary{cursor:pointer;font-weight:850}.self-paced-help details p{line-height:1.65}.self-paced-help a{color:#176b7b;font-weight:850}
+@media(max-width:720px){.final-project-fields{grid-template-columns:1fr}.final-project-fields label:last-child{grid-column:auto}}

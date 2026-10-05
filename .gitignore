@@ -1,0 +1,11 @@
+.DS_Store
+**/.DS_Store
+
+# Private local runtime data and credentials
+nuevo_sitio_web2/datos/
+nuevo_sitio_web2/CLAVE-PRIVADA-DEL-REVISOR.txt
+
+# Temporary package/runtime artifacts
+node_modules/
+.pnpm-store/
+*.log

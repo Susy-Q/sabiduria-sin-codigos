@@ -1,0 +1,46 @@
+SABIDURÍA SIN CÓDIGOS — SISTEMA LOCAL PRIVADO
+
+INICIO
+1. Haga doble clic en ABRIR-CURSO-PRIVADO.js.
+2. Mantenga abierta la ventana del sistema mientras utiliza el curso.
+3. El navegador abrirá el registro o el inicio de sesión.
+
+REGISTRO Y ACCESO
+- Cada estudiante se registra con una dirección de correo y una contraseña.
+- La contraseña debe tener al menos 10 caracteres.
+- No se envían correos y no se necesita internet.
+- Después de registrarse, el estudiante puede ingresar al curso.
+- Use el botón "Cerrar sesión" para terminar el acceso.
+
+DATOS LOCALES
+- La base de datos se crea automáticamente en: datos\curso.db
+- Las contraseñas no se guardan como texto legible.
+- Cada contraseña usa scrypt y una sal aleatoria individual.
+- Para conservar estudiantes y credenciales, incluya la carpeta datos en sus copias de seguridad.
+
+ARCHIVOS DEL SISTEMA
+- Las pantallas están construidas como archivos HTML con estilos y JavaScript integrados.
+- El funcionamiento del servidor y la autenticación está en servidor-local.js.
+- iniciar-curso.js inicia el servidor y abre el navegador.
+- ABRIR-CURSO-PRIVADO.js inicia el sistema con doble clic en Windows.
+- ABRIR-CURSO-PRIVADO.html ofrece una pantalla local con instrucciones y acceso al curso.
+- El archivo .bat se conserva únicamente para compatibilidad con copias anteriores.
+- curso.db es la base SQLite y se crea cuando se registra el primer estudiante.
+
+MENÚ Y CONTACTO
+- El menú principal usa hashtags: #module-1, #module-2, #module-3, #module-4 y #module-5.
+- Los apartados internos de cada módulo también usan hashtags para la navegación.
+- contacto.html contiene la información pública de contacto.
+- Para cambiar correo, teléfono, ubicación y horario, edite el bloque contactInformation al final de contacto.html.
+- El botón "Registrarme en el curso" abre el registro local de estudiantes.
+- El formulario de contacto guarda nombre, correo, asunto y mensaje en la tabla contact_messages de datos\curso.db.
+- El registro guarda nombre completo, teléfono y correo del estudiante; la contraseña permanece protegida.
+- Las páginas de acceso, registro y contacto están disponibles en inglés y español.
+- EN es el idioma inicial; la selección EN/ES se conserva localmente en el navegador.
+
+IMPORTANTE
+- Para utilizar registro, contacto y credenciales, inicie primero ABRIR-CURSO-PRIVADO.js.
+- Después puede usar ABRIR-CURSO-PRIVADO.html como pantalla de entrada.
+- Cualquier persona con permisos de Windows para leer esta carpeta podría acceder a los archivos fuente.
+  Si varias cuentas de Windows comparten el equipo, limite los permisos de esta carpeta al administrador
+  y a la cuenta que ejecuta el sistema.

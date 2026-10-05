@@ -1,0 +1,23 @@
+ESTRUCTURA DE LOS MÓDULOS
+
+modulo-1\miprimerencuentro.html
+modulo-1\miprimerencuentro.js
+modulo-2\iaparalavidadiaria.html
+modulo-2\iaparalavidadiaria.js
+modulo-3\elartedeconversar.html
+modulo-3\elartedeconversar.js
+modulo-4\navegandoconseguridad.html
+modulo-4\navegandoconseguridad.js
+modulo-5\tallercreativoypractico.html
+modulo-5\tallercreativoypractico.js
+
+FUENTE ÚNICA DEL CONTENIDO
+
+El contenido actualizado de los cinco módulos se administra únicamente desde:
+independencia-digital-ia.html
+
+Los archivos HTML y JavaScript dentro de cada carpeta se conservan como accesos
+compatibles. Al abrirlos, conducen automáticamente al módulo correspondiente
+dentro del curso central. De esta forma no puede aparecer una copia antigua o
+diferente del contenido y siempre se respetan el registro, los bloqueos, el
+progreso, los ejercicios y el certificado del estudiante.

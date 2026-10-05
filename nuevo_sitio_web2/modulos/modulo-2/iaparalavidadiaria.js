@@ -1,0 +1,1 @@
+(()=>{const lang=localStorage.getItem("id-course-language")||"en";document.documentElement.lang=lang;document.querySelectorAll("[data-en]").forEach(element=>element.textContent=element.dataset[lang]);setTimeout(()=>location.replace("../../independencia-digital-ia.html#module-2"),350)})();

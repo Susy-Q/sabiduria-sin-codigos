@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Register | Wisdom Without Code</title>
+  <link rel="stylesheet" href="accesibilidad.css">
+  <style>
+    :root{--ink:#183044;--navy:#173f56;--blue:#297b91;--aqua:#61c8c5;--cream:#fbf8f0;--muted:#60727d;--line:#cfdfdf;--gold:#efb95f}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:linear-gradient(135deg,var(--navy),#246378);color:var(--ink);font-family:"Segoe UI",Arial,sans-serif;font-size:17px}.shell{display:grid;min-height:100vh;grid-template-columns:.9fr 1.1fr;align-items:center;gap:7vw;width:min(calc(100% - 9vw),1150px);margin:auto;padding:42px 0}.intro{color:#fff}.registration-panel{display:flex;flex-direction:column}.registration-panel .top-actions{align-self:flex-end;margin-bottom:12px}.brand{display:flex;align-items:center;gap:12px;margin-bottom:45px}.mark{display:grid;width:57px;height:57px;place-items:center;border:1px solid rgba(255,255,255,.28);border-radius:17px;background:rgba(255,255,255,.1);font-weight:900}.brand span:last-child{color:rgba(255,255,255,.65);font-size:13px}.label{color:#a7ebe5;font-size:12px;font-weight:850;letter-spacing:.12em}h1{margin:15px 0 20px;font-size:clamp(3.2rem,5.5vw,5.8rem);line-height:.94;letter-spacing:-.06em}.intro p{color:rgba(255,255,255,.72);line-height:1.7}.card{padding:34px;border-radius:25px;background:var(--cream);box-shadow:0 24px 70px rgba(24,48,68,.18)}.top-actions,.language{display:flex;align-items:center;gap:8px}.language{padding:3px;border:1px solid rgba(255,255,255,.25);border-radius:11px}.language button{padding:6px 9px;border:0;border-radius:8px;background:transparent;color:rgba(255,255,255,.72);font-weight:850;cursor:pointer}.language button.active{background:#fff;color:var(--navy)}.home-link{display:inline-flex;align-items:center;gap:7px;padding:9px 13px;border:1px solid rgba(255,255,255,.25);border-radius:11px;color:#fff;text-decoration:none;font-size:12px;font-weight:850}.card h2{margin:4px 0 5px;font-size:34px}.card>p{margin:0 0 20px;color:var(--muted);font-size:13px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.field{display:grid;gap:5px}.field.full{grid-column:1/-1}.field label{font-size:12px;font-weight:800}.field input{width:100%;min-height:49px;padding:0 13px;border:1px solid var(--line);border-radius:12px;background:#fff;font:inherit;outline:0}.field input:focus{border-color:var(--aqua);box-shadow:0 0 0 4px rgba(97,200,197,.14)}.hint{color:var(--muted);font-size:10px}.submit{width:100%;min-height:52px;margin-top:16px;border:0;border-radius:13px;background:var(--navy);color:#fff;font-weight:850;cursor:pointer}.submit:disabled{opacity:.6}.message{display:none;margin:12px 0 0;padding:11px;border-radius:10px;font-size:12px}.message.show{display:block}.message.error{background:#ffe5df;color:#843426}.switch{margin-top:17px;padding-top:15px;border-top:1px solid var(--line);color:var(--muted);font-size:12px;text-align:center}.switch a{color:var(--blue);font-weight:850;text-decoration:none}@media(max-width:850px){.shell{grid-template-columns:1fr;width:min(calc(100% - 34px),650px)}.intro{padding-top:25px}.registration-panel{margin-bottom:35px}}@media(max-width:560px){.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.card{padding:31px 22px}}
+    .mark{display:grid!important;width:57px!important;height:57px!important;flex:0 0 57px;place-items:center!important;color:#fff;line-height:1;text-align:center}
+    .form-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+    .password-field{min-width:0;align-content:start;align-self:start}
+    #password,#confirm{display:block;box-sizing:border-box;width:100%;min-width:0;height:52px;min-height:52px;margin:0;padding:0 13px;border:1px solid var(--line);border-radius:12px}
+  </style>
+  <link rel="stylesheet" href="registro-mejorado.css">
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="pie-sitio.css">
+  <link rel="stylesheet" href="encabezado-mejorado.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="intro"><div class="brand"><span class="mark">SC</span><span data-en="Wisdom Without Code" data-es="Sabiduría Sin Códigos">Wisdom Without Code</span></div><span class="label" data-en="STUDENT REGISTRATION" data-es="REGISTRO DEL ESTUDIANTE">STUDENT REGISTRATION</span><h1 data-en="Create your course access." data-es="Cree su acceso al curso.">Create your course access.</h1><p data-en="Complete the form. Your password will be protected cryptographically and will never be stored as readable text." data-es="Complete el formulario. Su contraseña será protegida criptográficamente y nunca se guardará como texto legible.">Complete the form. Your password will be protected cryptographically and will never be stored as readable text.</p><figure class="registration-illustration"><img src="Imagenes de del curso/registro-curso-adultos-mayores.png" alt="Older couple registering together for an artificial intelligence course" data-alt-en="Older couple registering together for an artificial intelligence course" data-alt-es="Pareja de adultos mayores registrándose juntos en un curso de inteligencia artificial"></figure></section>
+    <div class="registration-panel"><div class="top-actions"><div class="language"><button type="button" data-lang="en">EN</button><button type="button" data-lang="es">ES</button></div><a class="home-link" id="homeLink" href="index.html"><span>⌂</span><span data-en="Home" data-es="Inicio">Home</span></a></div>
+      <section class="card"><h2 data-en="Student information" data-es="Información del estudiante">Student information</h2><p data-en="All fields are required to create access." data-es="Todos los campos son necesarios para crear el acceso.">All fields are required to create access.</p>
+        <form id="registrationForm"><div class="form-grid">
+          <div class="field full"><label for="fullName" data-en="Full name" data-es="Nombre completo">Full name</label><input id="fullName" name="fullName" autocomplete="name" required minlength="2" maxlength="100" data-placeholder-en="First and last name" data-placeholder-es="Nombre y apellidos"></div>
+          <div class="field"><label for="phone" data-en="Phone" data-es="Teléfono">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" required minlength="7" maxlength="30" placeholder="+506 0000-0000" pattern="[0-9+() -]+"></div>
+          <div class="field"><label for="email" data-en="Email" data-es="Correo electrónico">Email</label><input id="email" name="email" type="email" autocomplete="username" required maxlength="254" data-placeholder-en="name@example.com" data-placeholder-es="nombre@ejemplo.com"></div>
+          <div class="field password-field"><label for="password" data-en="Password" data-es="Contraseña">Password</label><input id="password" name="password" type="password" autocomplete="new-password" required minlength="10" maxlength="200"><span class="hint" data-en="Use at least 10 characters." data-es="Use al menos 10 caracteres.">Use at least 10 characters.</span></div>
+          <div class="field password-field"><label for="confirm" data-en="Confirm password" data-es="Confirmar contraseña">Confirm password</label><input id="confirm" name="confirm" type="password" autocomplete="new-password" required minlength="10" maxlength="200"></div>
+        </div><button class="submit" type="submit" data-en="Register and enter the course" data-es="Registrarme e ingresar al curso">Register and enter the course</button><p class="message" id="message" role="alert"></p></form>
+        <div class="switch"><span data-en="Already registered?" data-es="¿Ya tiene una cuenta?">Already registered?</span> <a href="acceso.html" data-en="Sign in" data-es="Iniciar sesión">Sign in</a></div>
+      </section>
+    </div>
+  </main>
+  <script src="registro-local.js"></script>
+  <script src="accesibilidad.js"></script>
+  <script src="pie-sitio.js"></script>
+</body>
+</html>
