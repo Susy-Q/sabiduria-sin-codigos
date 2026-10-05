@@ -16,8 +16,16 @@
 .activity span,.resource p{font-size:1rem!important;line-height:1.6}
 .doc-divider{font-size:.9rem!important}
 .footer-inner p{font-size:1rem!important;line-height:1.6}
+.progress-panel{width:min(320px,calc(100vw - 32px))!important;padding:15px!important}
+.progress-panel h3{margin:0 0 8px!important;font-size:1.15rem!important;line-height:1.25!important}
+.progress-overall{gap:14px;margin:0 0 12px!important;font-size:.95rem!important;line-height:1.35!important}
+.progress-overall strong{font-size:1.5rem!important;line-height:1!important}
+.progress-list{gap:10px!important}
+.progress-row{gap:5px 10px!important;font-size:.95rem!important;line-height:1.35!important}
+.progress-track{height:7px!important}
 
 @media(max-width:580px){
+  .progress-panel{top:142px!important;right:16px!important;left:auto!important;width:min(320px,calc(100vw - 32px))!important}
   .outline-head h2{font-size:1.65rem!important}
   .outline-intro{font-size:1rem!important}
   .outline-item{padding:12px!important}
