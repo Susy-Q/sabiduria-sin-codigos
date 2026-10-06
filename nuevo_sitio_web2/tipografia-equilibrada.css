@@ -41,5 +41,13 @@
 }
 
 @media(min-width:581px) and (max-width:800px){
+  .site-header .header-inner{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;grid-template-areas:"brand tools" ". actions"!important;gap:8px 14px!important;padding:10px 0!important}
+  .site-header .header-left{display:contents!important}
+  .site-header .brand{grid-area:brand!important;align-self:center!important}
+  .site-header .header-tools{grid-area:tools!important;width:auto!important;justify-self:end!important;margin:0!important}
+  .site-header .header-left-actions{grid-area:actions!important;justify-self:end!important}
   .site-header .mobile-continue-course{display:none!important}
+  .site-header .brand-logo{width:64px!important;height:64px!important;flex-basis:64px!important}
+  .site-header .brand-name strong{font-size:1.14rem!important}
+  .site-header .brand-name span{font-size:.82rem!important}
 }
