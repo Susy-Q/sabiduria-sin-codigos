@@ -39,3 +39,7 @@
   .outline-topics-title{font-size:.8rem!important}
   .outline-topics{padding-left:18px!important;font-size:.95rem!important}
 }
+
+@media(min-width:581px) and (max-width:800px){
+  .site-header .mobile-continue-course{display:none!important}
+}
