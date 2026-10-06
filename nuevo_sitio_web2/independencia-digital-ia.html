@@ -676,7 +676,7 @@
     function isModuleReviewComplete(index){return [0,1,2,3,4].filter(questionIndex=>localStorage.getItem(moduleReviewStorageKey(index,questionIndex))==="1").length>=4}
     function activityHasEvidence(index,activityIndex){const key=activityStorageKey(index,activityIndex);return (localStorage.getItem(`${key}-response-v1`)||"").trim().length>=10}
     function finalProjectComplete(){return localStorage.getItem(`id-v2-final-project-v1-${encodeURIComponent(currentStudentProgressId())}`)==="1"}
-    function isModuleComplete(index){const activitiesComplete=modules[index].en.activities.every((activity,i)=>localStorage.getItem(activityStorageKey(index,i))==="1"&&activityHasEvidence(index,i));const topicsComplete=topicProgress(index)>=getModuleNavigationTopics(index).length;return activitiesComplete&&topicsComplete&&isModuleReviewComplete(index)&&(index!==4||finalProjectComplete())}
+    function isModuleComplete(index){const activitiesComplete=modules[index].en.activities.every((activity,i)=>localStorage.getItem(activityStorageKey(index,i))==="1"&&activityHasEvidence(index,i));const topicsComplete=topicProgress(index)>=getModuleNavigationTopics(index).length;return activitiesComplete&&topicsComplete&&isModuleReviewComplete(index)}
     function isModuleUnlocked(index){return reviewMode||index===0||isModuleComplete(index-1)}
     function lockedMessage(){alert(t("lockedHint"))}
     function showModuleCompletion(moduleIndex){
@@ -853,15 +853,14 @@
     function closeCourseOutline(){document.querySelectorAll("[data-outline-overlay]").forEach(overlay=>{overlay.classList.remove("open");overlay.setAttribute("aria-hidden","true")});document.querySelectorAll("[data-toggle-outline]").forEach(trigger=>trigger.setAttribute("aria-expanded","false"));document.body.classList.remove("outline-open")}
 
     function moduleProgress(index){
-      const activityTotal=modules[index].en.activities.length,topicTotal=getModuleNavigationTopics(index).length,reviewTotal=5,total=activityTotal+topicTotal+reviewTotal+(index===4?1:0);
+      const activityTotal=modules[index].en.activities.length,topicTotal=getModuleNavigationTopics(index).length,reviewTotal=5,total=activityTotal+topicTotal+reviewTotal;
       let done=Math.min(topicProgress(index),topicTotal);modules[index].en.activities.forEach((activity,i)=>{if(localStorage.getItem(activityStorageKey(index,i))==="1"&&activityHasEvidence(index,i))done++});for(let questionIndex=0;questionIndex<reviewTotal;questionIndex++){if(localStorage.getItem(moduleReviewStorageKey(index,questionIndex))==="1")done++}
-      if(index===4&&finalProjectComplete())done++;
       return Math.round(done/total*100);
     }
 
     function updateProgress(){
-      const total=modules.reduce((count,module,index)=>count+module[lang].activities.length+getModuleNavigationTopics(index).length+5+(index===4?1:0),0);
-      let done=0;modules.forEach((m,i)=>{done+=Math.min(topicProgress(i),getModuleNavigationTopics(i).length);m[lang].activities.forEach((a,j)=>{if(localStorage.getItem(activityStorageKey(i,j))==="1"&&activityHasEvidence(i,j))done++});for(let questionIndex=0;questionIndex<5;questionIndex++){if(localStorage.getItem(moduleReviewStorageKey(i,questionIndex))==="1")done++}if(i===4&&finalProjectComplete())done++});
+      const total=modules.reduce((count,module,index)=>count+module[lang].activities.length+getModuleNavigationTopics(index).length+5,0);
+      let done=0;modules.forEach((m,i)=>{done+=Math.min(topicProgress(i),getModuleNavigationTopics(i).length);m[lang].activities.forEach((a,j)=>{if(localStorage.getItem(activityStorageKey(i,j))==="1"&&activityHasEvidence(i,j))done++});for(let questionIndex=0;questionIndex<5;questionIndex++){if(localStorage.getItem(moduleReviewStorageKey(i,questionIndex))==="1")done++}});
       const percent=Math.round(done/total*100);document.getElementById("progressPercent").textContent=percent+"%";document.getElementById("headerProgressPercent").textContent=percent+"%";
       const progressColor=percent===100?"#58e39a":percent>=80?"#b990ff":percent>=60?"#ff9f68":percent>=40?"#ffd166":percent>=20?"#5fd7cf":percent>0?"#6fb8ff":"#78909c";
       document.querySelectorAll(".progress-ring").forEach(ring=>{ring.style.setProperty("--course-progress",percent);ring.style.setProperty("--course-progress-color",progressColor)});
