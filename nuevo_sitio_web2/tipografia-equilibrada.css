@@ -23,6 +23,11 @@
 .progress-list{gap:10px!important}
 .progress-row{gap:5px 10px!important;font-size:.95rem!important;line-height:1.35!important}
 .progress-track{height:7px!important}
+.site-header .course-menu .submenu{width:min(320px,calc(100vw - 32px))!important;padding:10px 15px!important}
+.submenu button,.submenu a{grid-template-columns:42px minmax(0,1fr)!important;gap:10px!important;min-height:44px!important;padding:0!important}
+.menu-num{width:42px!important;height:42px!important}
+.submenu strong{font-size:.95rem!important;line-height:1.3!important}
+.submenu small{font-size:.85rem!important;line-height:1.35!important}
 
 @media(max-width:580px){
   .progress-panel{top:142px!important;right:16px!important;left:auto!important;width:min(320px,calc(100vw - 32px))!important}
